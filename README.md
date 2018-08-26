@@ -17,7 +17,12 @@ npm audit fix => To Fix vulnerabilities
 ```cmd
 ng new AngularEssential
 pushd AngularEssential
+ng generate component nav-bar
+ng generate component main-item
 ng generate component media-item
+ng generate component media-item-list
+ng generate directive favorite
+ng generate pipe category-list
 ```
 
 ## Development server
