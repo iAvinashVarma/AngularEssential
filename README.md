@@ -12,6 +12,14 @@ npm install -g npm
 npm audit fix => To Fix vulnerabilities
 ```
 
+## ng commands
+
+```cmd
+ng new AngularEssential
+pushd AngularEssential
+ng generate component media-item
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
