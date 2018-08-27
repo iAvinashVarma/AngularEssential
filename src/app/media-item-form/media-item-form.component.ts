@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-media-item-form',
@@ -15,8 +15,24 @@ export class MediaItemFormComponent implements OnInit {
       medium: ['Movies', Validators.required],
       name: ['', [Validators.required, Validators.pattern('[\\w\\-\\s\\/]+')]],
       category: ['Action', Validators.required],
-      year: ['', Validators.required]
+      year: ['', this.yearValidator]
     });
+  }
+
+  yearValidator(control: AbstractControl) {
+    if (!control.value) {
+      return null;
+    }
+    const year = control.value;
+    const minYear = 1900;
+    const maxYear = 2100;
+    if (year >= minYear && year <= maxYear) {
+      return null;
+    } else {
+      return {
+        'year': true
+      };
+    }
   }
 
   onSubmit(mediaItem) {
