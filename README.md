@@ -23,6 +23,7 @@ ng generate component media-item
 ng generate component media-item-list
 ng generate directive favorite
 ng generate pipe category-list
+ng generate component media-item-form
 ```
 
 ## Development server
