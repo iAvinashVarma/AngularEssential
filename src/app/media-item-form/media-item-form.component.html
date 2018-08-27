@@ -1,21 +1,21 @@
 <div class="container">
   <h2>Add Media to Watch</h2>
-  <form #mediaItemForm="ngForm" (ngSubmit)="onSubmit(mediaItemForm.value)">
+  <form [formGroup]="mediaForm" (ngSubmit)="onSubmit(mediaForm.value)">
     <div class="form-group">
       <label for="medium">Medium</label>
-      <select class="form-control" name="medium" id="medium" ngModel>
+      <select formControlName="medium" class="form-control" id="medium">
         <option value="Movies">Movies</option>
         <option value="Series">Series</option>
       </select>
     </div>
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" name="name" id="name" aria-describedby="nameHelp" placeholder="Enter Name" ngModel>
+      <input type="text" formControlName="name" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter Name">
       <small id="nameHelp" class="form-text text-muted">Movie name that you like.</small>
     </div>
     <div class="form-group">
       <label for="category">Category</label>
-      <select class="form-control" name="category" id="category" ngModel>
+      <select formControlName="category" class="form-control" id="category">
         <option value="Action">Action</option>
         <option value="Science Fiction">Science Fiction</option>
         <option value="Comedy">Comedy</option>
@@ -26,7 +26,7 @@
     </div>
     <div class="form-group">
       <label for="year">Year</label>
-      <input type="number" class="form-control" name="year" id="year" placeholder="Enter Year" ngModel>
+      <input type="number" formControlName="year" class="form-control" id="year" placeholder="Enter Year">
     </div>
     <button type="submit" class="btn btn-primary">Save</button>
   </form>
