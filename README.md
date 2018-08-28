@@ -25,6 +25,7 @@ ng generate directive favorite
 ng generate pipe category-list
 ng generate component media-item-form
 ng generate service media-item
+ng generate class providers
 ```
 
 ## Development server

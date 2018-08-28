@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, AbstractControl, Validators, FormBuilder } from '@angular/forms';
 import { MediaItemService } from '../media-item.service';
+import { lookupListToken } from '../providers';
 
 @Component({
   selector: 'app-media-item-form',
@@ -11,16 +12,16 @@ export class MediaItemFormComponent implements OnInit {
   mediaForm: FormGroup;
   constructor(private formBuilder: FormBuilder,
     private mediaItemService: MediaItemService,
-    @Inject('lookupListToken') public lookupLists) { }
+    @Inject(lookupListToken) public lookupLists) { }
 
   ngOnInit() {
     this.mediaForm = this.formBuilder.group({
-      medium: this.formBuilder.control('Movies'),
+      medium: this.formBuilder.control(this.lookupLists.mediums[0]),
       name: this.formBuilder.control('', Validators.compose([
         Validators.required,
         Validators.pattern('[\\w\\-\\s\\/]+')
       ])),
-      category: this.formBuilder.control('Action'),
+      category: this.formBuilder.control(this.lookupLists.categories[0]),
       year: this.formBuilder.control('', this.yearValidator)
     });
   }
