@@ -28,6 +28,7 @@ ng generate service media-item
 ng generate class providers
 ng generate class mock-xhr-backend
 ng generate interface media-item
+ng generate class app.routing
 ```
 
 ## Development server
