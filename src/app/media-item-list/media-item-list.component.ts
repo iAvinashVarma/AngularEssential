@@ -7,14 +7,20 @@ import { MediaItemService } from '../media-item.service';
   styleUrls: ['./media-item-list.component.css']
 })
 export class MediaItemListComponent implements OnInit {
+  medium = '';
   mediaItems;
   constructor(private mediaItemService: MediaItemService) { }
   ngOnInit() {
-    this.mediaItemService.get().subscribe(mI => {
-      this.mediaItems = mI;
-    });
+    this.getMediaItems(this.medium);
   }
   onMediaItemDelete(mediaItem) {
     this.mediaItemService.delete(mediaItem);
+  }
+  getMediaItems(medium) {
+    this.medium = medium;
+    this.mediaItemService.get(medium)
+      .subscribe(m => {
+        this.mediaItems = m;
+      });
   }
 }

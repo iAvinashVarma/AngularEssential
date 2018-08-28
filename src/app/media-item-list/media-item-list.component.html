@@ -1,7 +1,25 @@
-<section>
-  <app-media-item [ngClass]="{'medium-movies': mediaItem.medium==='Movies', 'medium-series': mediaItem.medium==='Series'}"
-    *ngFor="let mediaItem of mediaItems" [mediaItem]="mediaItem" (delete)="onMediaItemDelete($event)"></app-media-item>
-</section>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card-body">
+        <button type="button" class="btn btn-link" (click)="getMediaItems('')">
+          All
+          <span class="fa fa-th" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn-link" (click)="getMediaItems('Movies')">
+          Movies
+          <span class="fa fa-film" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn-link" (click)="getMediaItems('Series')">
+          Series
+          <span class="fa fa-video-camera" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-media-item [ngClass]="{'medium-movies': mediaItem.medium==='Movies', 'medium-series': mediaItem.medium==='Series'}"
+  *ngFor="let mediaItem of mediaItems" [mediaItem]="mediaItem" (delete)="onMediaItemDelete($event)"></app-media-item>
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <h1 class="display-4">Available Categories</h1>

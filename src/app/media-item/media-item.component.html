@@ -1,34 +1,35 @@
-<div class="album py-5 bg-light">
-  <div class="container">
-
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card mb-12 shadow-sm">
-          <div class="card-body">
-            <h3 class="card-text">{{ mediaItem.name }}</h3>
-            <ng-template [ngIf]="mediaItem.watchedOn">
-              <div>Watched on {{ mediaItem.watchedOn | date: 'shortDate' }}</div>
-            </ng-template>
-            <div>{{ mediaItem.category }}</div>
-            <div>{{ mediaItem.year }}</div>
-            <div></div>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-link" (click)="onLove()">
-                  <span [appFavorite]="mediaItem.isFavorite" class="fa" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="btn btn-link" (click)="onView()">
-                  <span class="fa fa-eye" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="btn btn-link" (click)="onEdit()">
-                  <span class="fa fa-edit" aria-hidden="true"></span>
-                </button>
-                <button type="button" class="btn btn-link" (click)="onDelete()">
-                  <span class="fa fa-trash" aria-hidden="true"></span>
-                </button>
-              </div>
-              <small class="text-muted">9 mins</small>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card text-white bg-dark mb-3">
+        <div class="card-header">{{ mediaItem.name }}
+          <span *ngIf="mediaItem.year"> - ({{ mediaItem.year }})</span>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ mediaItem.name }}</h5>
+          <div>{{ mediaItem.category }}</div>
+          <div>{{ mediaItem.year }}</div>
+          <div></div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+              <button type="button" class="btn btn-link" (click)="onLove()">
+                <span [appFavorite]="mediaItem.isFavorite" class="fa" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn btn-link" (click)="onView()">
+                <span class="fa fa-eye" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn btn-link" (click)="onEdit()">
+                <span class="fa fa-edit" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="btn btn-link" (click)="onDelete()">
+                <span class="fa fa-trash" aria-hidden="true"></span>
+              </button>
             </div>
+            <ng-template [ngIf]="mediaItem.watchedOn">
+              <div class="card-footer">
+                <small class="text-muted">Watched on {{ mediaItem.watchedOn | date: 'shortDate' }}</small>
+              </div>
+            </ng-template>
           </div>
         </div>
       </div>
