@@ -1,7 +1,9 @@
 {
     "cSpell.words": [
         "Injectable",
-        "Validators"
+        "Validators",
+        "backend",
+        "mediaitems"
     ],
     "files.exclude": {
       "**/.git": true,

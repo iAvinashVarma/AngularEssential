@@ -26,6 +26,8 @@ ng generate pipe category-list
 ng generate component media-item-form
 ng generate service media-item
 ng generate class providers
+ng generate class mock-xhr-backend
+ng generate interface media-item
 ```
 
 ## Development server

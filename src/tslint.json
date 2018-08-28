@@ -1,5 +1,7 @@
 {
     "extends": "../tslint.json",
+    "radix": true,
+    "no-shadowed-variable": true,
     "rules": {
         "directive-selector": [
             true,
