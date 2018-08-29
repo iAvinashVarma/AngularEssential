@@ -3,6 +3,7 @@
         "Injectable",
         "Validators",
         "backend",
+        "crossorigin",
         "mediaitems"
     ],
     "files.exclude": {

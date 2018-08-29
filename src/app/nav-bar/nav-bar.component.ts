@@ -12,6 +12,10 @@ export class NavBarComponent implements OnInit {
   home = 'Home';
   link = 'Link';
   search = 'Search';
+  movies = 'Movies';
+  series = 'Series';
+  all = 'All';
+  add = 'Add';
   constructor() { }
 
   ngOnInit() {

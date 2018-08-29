@@ -2,6 +2,8 @@
 
 AngularEssential project is based on [LinkedIn Learning](https://www.linkedin.com/learning)'s [Angular Essential](https://www.linkedin.com/learning/angular-essential-training) instructed by [Justin Schwartzenberger](https://www.linkedin.com/learning/instructors/justin-schwartzenberger) and was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
+Instructed in Angular 2, implemented in Angular 6.
+
 ## npm commands
 
 ```cmd
