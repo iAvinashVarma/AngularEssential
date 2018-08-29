@@ -22,12 +22,13 @@
     </div>
     <div class="form-group">
       <label for="year">Year</label>
-      <input type="number" formControlName="year" class="form-control" id="year" placeholder="Enter Year">
+<input type="number" formControlName="year" class="form-control" id="year" placeholder="Enter Year">
       <div *ngIf="mediaForm.get('year').errors as yearErrors" class="alert alert-danger">
         Must be between {{ yearErrors.year.min }} and {{ yearErrors.year.max }}.
       </div>
     </div>
-    <button type="submit" class="btn btn-primary" [disabled]="!mediaForm.valid">Save</button>
+    <button type="submit" class="btn btn-dark btn-sm" [disabled]="!mediaForm.valid">
+      <span class="fas fa-plus"></span> Save</button>
   </form>
 </div>
 <br>

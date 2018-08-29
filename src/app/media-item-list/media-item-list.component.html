@@ -1,20 +1,3 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="card-body">
-        <button type="button" class="btn btn-link" (click)="getMediaItems('')">
-          <span class="fas fa-th" aria-hidden="true"></span> All
-        </button>
-        <button type="button" class="btn btn-link" (click)="getMediaItems('Movies')">
-          <span class="fas fa-film" aria-hidden="true"></span> Movies
-        </button>
-        <button type="button" class="btn btn-link" (click)="getMediaItems('Series')">
-          <span class="fas fa-file-video" aria-hidden="true"></span> Series
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
 <app-media-item [ngClass]="{'medium-movies': mediaItem.medium==='Movies', 'medium-series': mediaItem.medium==='Series'}"
   *ngFor="let mediaItem of mediaItems" [mediaItem]="mediaItem" (delete)="onMediaItemDelete($event)"></app-media-item>
 <div class="jumbotron jumbotron-fluid">
