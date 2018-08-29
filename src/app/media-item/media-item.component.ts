@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { MediaItem } from '../media-item';
 
 @Component({
   selector: 'app-media-item',
@@ -6,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./media-item.component.css']
 })
 export class MediaItemComponent implements OnInit {
-  @Input() mediaItem;
+  @Input() mediaItem: MediaItem;
   @Output() delete = new EventEmitter();
   constructor() { }
 
@@ -22,11 +23,11 @@ export class MediaItemComponent implements OnInit {
   }
 
   onLove() {
-    console.log('Love');
+    this.mediaItem.isFavorite = !this.mediaItem.isFavorite;
   }
 
   onView() {
-    console.log('View');
+    console.log(this.mediaItem);
   }
 
   onEdit() {

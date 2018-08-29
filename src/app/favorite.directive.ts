@@ -4,8 +4,8 @@ import { Directive, HostBinding, HostListener, Input } from '@angular/core';
   selector: '[appFavorite]'
 })
 export class FavoriteDirective {
-  @HostBinding('class.fa-heart') isHeartEnabled = true;
-  @HostBinding('class.fa-heart-o') isHeartDisabled = true;
+  @HostBinding('class.fas') isHeartEnabled = true;
+  @HostBinding('class.far') isHeartDisabled = true;
   @HostBinding('class.is-favorite') isFavorite = true;
   @HostListener('mouseenter') onMouseEnter() {
     if (!this.isFavorite) {

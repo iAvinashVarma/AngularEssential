@@ -4,7 +4,9 @@
         "Validators",
         "backend",
         "crossorigin",
-        "mediaitems"
+        "fortawesome",
+        "mediaitems",
+        "fontawesome"
     ],
     "files.exclude": {
       "**/.git": true,

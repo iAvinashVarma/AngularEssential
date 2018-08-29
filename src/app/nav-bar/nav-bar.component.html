@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">{{ title }}</a>
+  <a class="navbar-brand" href="#"><span class="fab fa-angular" aria-hidden="true"></span> {{ title }}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,23 +7,23 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/">{{ home }}
-          <span class="sr-only">(current)</span>
+        <a class="nav-link" routerLink="/">
+          <span class="fas fa-home" aria-hidden="true"></span> {{ home }}
         </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/{{ movies | lowercase }}">{{ movies }}
-          <span class="sr-only">(current)</span>
+        <a class="nav-link" routerLink="/{{ movies }}">
+          <span class="fas fa-film" aria-hidden="true"></span> {{ movies }}
         </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/{{ series | lowercase }}">{{ series }}
-          <span class="sr-only">(current)</span>
+        <a class="nav-link" routerLink="/{{ series }}">
+          <span class="fas fa-file-video" aria-hidden="true"></span> {{ series }}
         </a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" routerLink="/{{ add | lowercase }}">{{ add }}
-          <span class="sr-only">(current)</span>
+        <a class="nav-link" routerLink="/{{ add | lowercase }}">
+          <span class="fas fa-plus-square"></span> {{ add }}
         </a>
       </li>
     </ul>
