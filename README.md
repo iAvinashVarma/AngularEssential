@@ -4,6 +4,13 @@ AngularEssential project is based on [LinkedIn Learning](https://www.linkedin.co
 
 Instructed in Angular 2, implemented in Angular 6 using Bootstrap 4.
 
+![apm](https://img.shields.io/apm/l/vim-mode.svg)
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/iAvinashVarma) [![Twitter Follow](https://img.shields.io/twitter/follow/iAvinashVarma.svg?style=social&label=Follow)](https://twitter.com/iAvinashVarma)
+![GitHub followers](https://img.shields.io/github/followers/iAvinashVarma.svg?style=flat-square&label=Follow)
+[![Build status](https://avvarma.visualstudio.com/ProgLan/_apis/build/status/AngularEssential?branchName=master)](https://avvarma.visualstudio.com/ProgLan/_build/latest?definitionId=6)
+[![Feature Requests](https://img.shields.io/github/issues/iAvinashVarma/AngularEssential/feature-request.svg)](https://github.com/iAvinashVarma/AngularEssential/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc)
+[![Bugs](https://img.shields.io/github/issues/iAvinashVarma/AngularEssential/bug.svg)](https://github.com/iAvinashVarma/AngularEssential/issues?utf8=✓&q=is%3Aissue+is%3Aopen+label%3Abug)
+
 ## npm install
 
 ```cmd
